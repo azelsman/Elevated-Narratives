@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Elevated Narratives - Impact Review</title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+      .quiz-section {
+        max-width: 600px;
+        margin: 0 auto;
+        width: 100%;
+        padding: 0 1rem;
+      }
+    </style>
+</head>
+<body>
+    <section class="max-width">
+        <!--#include virtual="header.html" -->
+        <header id="header"></header>
+        <!-- Progress Bar Wrapper -->
+        <div class="progress-wrapper" aria-label="Quiz progress">
+        <div 
+            id="progress-bar"
+            class="progress-bar"
+            role="progressbar"
+            aria-valuemin="0"
+            aria-valuemax="7"
+            aria-valuenow="1"
+            aria-describedby="progress-desc"
+            style="--progress: 14%;">
+        </div>
+        </div>
+        <span id="progress-desc" class="sr-only">Step 1 of 7</span>
+        <main>
+            <!-- STEP 1 (Q1): Branch selector -->
+             <form id="impactForm" data-total-steps="7" novalidate>
+             <div id="step-error" class="error-banner" role="alert" hidden></div>
+            <section class="step" data-step="1" aria-labelledby="q1-label">
+            <h2 id="q1-label" class="step-title">What’s the main job you need your video to do right now?</h2>
+            <div class="options">
+                <label class="opt"><input type="radio" name="q1_priority" value="audience" required>Grow my audience</label>
+                <label class="opt"><input type="radio" name="q1_priority" value="sales">Generate more leads &amp; sales</label>
+                <label class="opt"><input type="radio" name="q1_priority" value="authority">Build brand authority</label>
+                <label class="opt"><input type="radio" name="q1_priority" value="engagement">Boost social engagement</label>
+            </div>
+            <div class="nav">
+                <button class="primary-btn" type="button" data-action="next">Next</button>
+            </div>
+            </section>
+
+            <!-- ===== BRANCH: AUDIENCE (Q2, Q3) ===== -->
+            <section class="step is-branch" data-branch="audience" data-step="2" hidden aria-labelledby="q2-label">
+            <h2 id="q2-label" class="step-title">Which platform matters most for your growth right now?</h2>
+            <div class="options">
+                <label class="opt"><input type="radio" name="q2_platform" value="YouTube" required> YouTube</label>
+                <label class="opt"><input type="radio" name="q2_platform" value="TikTok"> TikTok</label>
+                <label class="opt"><input type="radio" name="q2_platform" value="Instagram"> Instagram</label>
+                <label class="opt"><input type="radio" name="q2_platform" value="LinkedIn"> LinkedIn</label>
+            </div>
+            <div class="nav">
+                <button class="secondary-btn" type="button" data-action="prev">Back</button>
+                <button class="primary-btn" type="button" data-action="next">Next</button>
+            </div>
+            </section>
+
+            <section class="step is-branch" data-branch="audience" data-step="3" hidden aria-labelledby="q3-label">
+            <h2 id="q3-label" class="step-title">What’s the biggest roadblock holding back your growth?</h2>
+            <div class="options">
+                <label class="opt"><input type="radio" name="q3_growth_block" value="hook" required> Grabbing attention (scroll-stopping)</label>
+                <label class="opt"><input type="radio" name="q3_growth_block" value="watch"> Getting people to actually watch (watch time)</label>
+                <label class="opt"><input type="radio" name="q3_growth_block" value="subs"> Turning viewers into subscribers</label>
+                <label class="opt"><input type="radio" name="q3_growth_block" value="consistency"> Staying consistent with content</label>
+            </div>
+            <div class="nav">
+                <button class="secondary-btn" type="button" data-action="prev">Back</button>
+                <button class="primary-btn" type="button" data-action="next">Next</button>
+            </div>
+            </section>
+
+            <!-- ===== BRANCH: SALES (Q4, Q5) ===== -->
+            <section class="step is-branch" data-branch="sales" data-step="2" hidden aria-labelledby="q4-label">
+            <h2 id="q4-label" class="step-title">What’s the primary conversion goal of this video?</h2>
+            <div class="options">
+                <label class="opt"><input type="radio" name="q4_conversion" value="web" required> Drive website traffic</label>
+                <label class="opt"><input type="radio" name="q4_conversion" value="calls"> Book calls</label>
+                <label class="opt"><input type="radio" name="q4_conversion" value="purchase"> Generate purchases</label>
+                <label class="opt"><input type="radio" name="q4_conversion" value="subs_goal"> Build subscribers</label>
+            </div>
+            <div class="nav">
+                <button class="secondary-btn" type="button" data-action="prev">Back</button>
+                <button class="primary-btn" type="button" data-action="next">Next</button>
+            </div>
+            </section>
+
+            <section class="step is-branch" data-branch="sales" data-step="3" hidden aria-labelledby="q5-label">
+            <h2 id="q5-label" class="step-title">What’s tripping you up most when it comes to sales?</h2>
+            <div class="options">
+                <label class="opt"><input type="radio" name="q5_sales_block" value="no_clicks" required> Not enough clicks</label>
+                <label class="opt"><input type="radio" name="q5_sales_block" value="no_conv"> Lots of clicks, no conversions</label>
+                <label class="opt"><input type="radio" name="q5_sales_block" value="unclear_offer"> Offer isn’t clear enough</label>
+                <label class="opt"><input type="radio" name="q5_sales_block" value="wrong_audience"> Attracting the wrong audience</label>
+            </div>
+            <div class="nav">
+                <button class="secondary-btn" type="button" data-action="prev">Back</button>
+                <button class="primary-btn" type="button" data-action="next">Next</button>
+            </div>
+            </section>
+
+            <!-- ===== BRANCH: AUTHORITY (Q6, Q7) ===== -->
+            <section class="step is-branch" data-branch="authority" data-step="2" hidden aria-labelledby="q6-label">
+            <h2 id="q6-label" class="step-title">How do you want your brand to show up on video?</h2>
+            <div class="options">
+                <label class="opt"><input type="radio" name="q6_archetype" value="leader" required> As a thought leader</label>
+                <label class="opt"><input type="radio" name="q6_archetype" value="educator"> As an educator</label>
+                <label class="opt"><input type="radio" name="q6_archetype" value="inspiration"> As an inspiration</label>
+            </div>
+            <div class="nav">
+                <button class="secondary-btn" type="button" data-action="prev">Back</button>
+                <button class="primary-btn" type="button" data-action="next">Next</button>
+            </div>
+            </section>
+
+            <section class="step is-branch" data-branch="authority" data-step="3" hidden aria-labelledby="q7-label">
+            <h2 id="q7-label" class="step-title">What’s your biggest challenge with your video’s impact?</h2>
+            <div class="options">
+                <label class="opt"><input type="radio" name="q7_authority_block" value="credibility" required> Earning credibility</label>
+                <label class="opt"><input type="radio" name="q7_authority_block" value="consistency_auth"> Staying consistent</label>
+                <label class="opt"><input type="radio" name="q7_authority_block" value="differentiation"> Standing out from competitors</label>
+                <label class="opt"><input type="radio" name="q7_authority_block" value="recognition"> Getting recognized</label>
+            </div>
+            <div class="nav">
+                <button class="secondary-btn" type="button" data-action="prev">Back</button>
+                <button class="primary-btn" type="button" data-action="next">Next</button>
+            </div>
+            </section>
+
+            <!-- ===== BRANCH: ENGAGEMENT (Q8, Q9) ===== -->
+            <section class="step is-branch" data-branch="engagement" data-step="2" hidden aria-labelledby="q8-label">
+            <h2 id="q8-label" class="step-title">Which engagement metric do you track as your top priority?</h2>
+            <div class="options">
+                <label class="opt"><input type="radio" name="q8_engagement_metric" value="likes" required> Likes</label>
+                <label class="opt"><input type="radio" name="q8_engagement_metric" value="comments"> Comments</label>
+                <label class="opt"><input type="radio" name="q8_engagement_metric" value="followers"> Followers</label>
+                <label class="opt"><input type="radio" name="q8_engagement_metric" value="shares"> Shares</label>
+            </div>
+            <div class="nav">
+                <button class="secondary-btn" type="button" data-action="prev">Back</button>
+                <button class="primary-btn" type="button" data-action="next">Next</button>
+            </div>
+            </section>
+
+            <section class="step is-branch" data-branch="engagement" data-step="3" hidden aria-labelledby="q9-label">
+            <h2 id="q9-label" class="step-title">What’s your biggest challenge in getting people to engage with your videos?</h2>
+            <div class="options">
+                <label class="opt"><input type="radio" name="q9_engagement_block" value="no_interaction" required> No interaction at all</label>
+                <label class="opt"><input type="radio" name="q9_engagement_block" value="few_comments"> Hardly any comments</label>
+                <label class="opt"><input type="radio" name="q9_engagement_block" value="passive"> Viewers watch but don’t respond</label>
+                <label class="opt"><input type="radio" name="q9_engagement_block" value="inconsistent"> Engagement is inconsistent</label>
+            </div>
+            <div class="nav">
+                <button class="secondary-btn" type="button" data-action="prev">Back</button>
+                <button class="primary-btn" type="button" data-action="next">Next</button>
+            </div>
+            </section>
+
+            <!-- ===== COMMON TAIL (Q10–Q14) ===== -->
+
+            <!-- STEP 4 (Q10) -->
+            <section class="step" data-step="4" hidden aria-labelledby="q10-label">
+            <h2 id="q10-label" class="step-title">Who’s the ideal prospect this video is meant to reach?</h2>
+            <div class="options">
+                <label class="opt"><input type="radio" name="q10_ideal" value="new_leads" required> New leads (people who don’t know you yet)</label>
+                <label class="opt"><input type="radio" name="q10_ideal" value="prospects"> Prospects (interested but not customers yet)</label>
+                <label class="opt"><input type="radio" name="q10_ideal" value="customers"> Existing customers (nurture + retention)</label>
+                <label class="opt"><input type="radio" name="q10_ideal" value="peers"> Industry peers / niche audience (authority &amp; thought leadership)</label>
+            </div>
+            <div class="nav">
+                <button class="secondary-btn" type="button" data-action="prev">Back</button>
+                <button class="primary-btn" type="button" data-action="next">Next</button>
+            </div>
+            </section>
+
+            <!-- STEP 5 (Q11) -->
+            <section class="step" data-step="5" hidden aria-labelledby="q11-label">
+            <h2 id="q11-label" class="step-title">How’s it performing now?</h2>
+            <div class="options">
+                <label class="opt"><input type="radio" name="q11_perf" value="views_vs_engagement" required> Views vs engagement</label>
+                <label class="opt"><input type="radio" name="q11_perf" value="no_traction"> No traction</label>
+                <label class="opt"><input type="radio" name="q11_perf" value="crushing_it"> Crushing it</label>
+            </div>
+            <div class="nav">
+                <button class="secondary-btn" type="button" data-action="prev">Back</button>
+                <button class="primary-btn" type="button" data-action="next">Next</button>
+            </div>
+            </section>
+
+            <!-- STEP 6 (Q12) — Accessible slider -->
+            <section class="step" data-step="6" hidden aria-labelledby="q12-label">
+            <h2 id="q12-label" class="step-title">On a scale of 1 to 10, how confident are you in this video’s impact?</h2>
+
+            <p id="q12-value" class="microcopy" aria-live="polite">Confidence: <strong>5</strong> (neutral)</p>
+            <input id="confidence" name="q12_confidence" type="range"
+                    min="1" max="10" step="1" value="5" class="range"
+                    aria-describedby="q12-help" aria-valuemin="1" aria-valuemax="10"
+                    aria-valuenow="5" aria-valuetext="neutral" list="confidence-ticks" />
+            <datalist id="confidence-ticks">
+                <option value="1"></option><option value="2"></option><option value="3"></option><option value="4"></option><option value="5"></option>
+                <option value="6"></option><option value="7"></option><option value="8"></option><option value="9"></option><option value="10"></option>
+            </datalist>
+            <p id="q12-help" class="help">Use left/right arrow keys to adjust. 1 = not confident, 10 = extremely confident.</p>
+
+            <div class="nav">
+                <button class="secondary-btn" type="button" data-action="prev">Back</button>
+                <button class="primary-btn" type="button" data-action="next">Next</button>
+            </div>
+            </section>
+
+            <!-- STEP 7 (Q13 + Q14) -->
+            <section class="step" data-step="7" hidden aria-labelledby="q13-label">
+            <h2 id="q13-label" class="step-title">Paste the public link to the video you’d like us to review.</h2>
+            <input type="url" name="q13_video_url" required inputmode="url" placeholder="http://"
+                    pattern="https?://.*" aria-describedby="q13-help" />
+            <p id="q13-help" class="help">Valid: YouTube, TikTok, Instagram, LinkedIn, Vimeo. Make sure it’s public/shareable.</p>
+
+            <h2 id="q14-label" class="step-title">Enter your email to receive your personalized Video Impact Review.</h2>
+            <input type="email" name="q14_email" required placeholder="you@brand.com" />
+
+            <p class="microcopy">We’ll send your Video Impact Review here.</p>
+
+            <div class="nav">
+                <button class="secondary-btn" type="button" data-action="prev">Back</button>
+                <button class="primary-btn" type="submit">Blast Off</button>
+            </div>
+            <p class="microcopy">We’ll only use your email to deliver your Impact Review. For details see our <a href="privacy.html" target="_blank">Privacy Policy</a>.</p>
+            </section>
+            </form>
+        </main>
+       
+    </section>
+     <!--#include virtual="footer.html" -->
+        <footer id="footer" class=></footer>
+        <script src="js/loader.js"></script>
+        <script src="js/progressbar.js"></script>
+        <script src="js/quiz_logic.js"></script>
+</body>
+</html>
