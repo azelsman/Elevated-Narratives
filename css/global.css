@@ -1,3 +1,48 @@
+/* Flex row for Why Stories Stick section */
+.why-stories-row {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+.why-stories-content {
+  flex: 1 1 320px;
+  min-width: 0;
+}
+/* Make the image card take up more space in the row */
+.why-stories-row .card {
+  flex: 1 1 400px;
+  max-width: 600px;
+  min-width: 240px;
+  align-self: flex-start;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.why-stories-row .card img {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  border-radius: 1rem;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+}
+@media (max-width: 800px) {
+  .why-stories-row {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  .why-stories-row .card {
+    max-width: 100%;
+    width: 100%;
+    align-self: center;
+  }
+  .why-stories-row .card img {
+    max-width: 100%;
+    width: 100%;
+  }
+}
 /* Storyboard panel styles */
 .storyboard-panel {
   margin: 0;
@@ -138,6 +183,9 @@ html, body {
       margin: 0 auto;
       box-sizing: border-box;
     }
+    .image-chip{
+      max-width: 600px; /* or your preferred max */
+    }
    
     .image img {
       width: 100%;
@@ -182,7 +230,7 @@ html, body {
       padding-left: 1rem;
       padding-right: 1rem;
     }
-    .card img {
+    .card img, .image-chip img {
       display: block;
       width: 100%;
       height: auto;
@@ -194,7 +242,20 @@ html, body {
     /* Calendly sizing */
     .calendly-inline-widget {
       min-width: 320px;
-      height: 760px; /* adjust to taste */
+      height: 700px;
+    }
+    @media (max-width: 600px) {
+      .calendly-inline-widget {
+        height: 1000px !important;
+        min-width: 100vw !important;
+        max-width: 100vw !important;
+        overflow: visible !important;
+      }
+      html, body, #calendar, section {
+        height: auto !important;
+        min-height: 0 !important;
+        overflow: visible !important;
+      }
     }
     li{
       text-align: left;
