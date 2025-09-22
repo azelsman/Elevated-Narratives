@@ -1,68 +1,4 @@
-/* Flex row for Why Stories Stick section */
-.why-stories-row {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  gap: 2rem;
-  flex-wrap: wrap;
-}
-.why-stories-content {
-  flex: 1 1 320px;
-  min-width: 0;
-}
-/* Make the image card take up more space in the row */
-.why-stories-row .card {
-  flex: 1 1 400px;
-  max-width: 600px;
-  min-width: 240px;
-  align-self: flex-start;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.why-stories-row .card img {
-  width: 100%;
-  height: auto;
-  max-width: 100%;
-  border-radius: 1rem;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
-}
-@media (max-width: 800px) {
-  .why-stories-row {
-    flex-direction: column;
-    gap: 1.5rem;
-  }
-  .why-stories-row .card {
-    max-width: 100%;
-    width: 100%;
-    align-self: center;
-  }
-  .why-stories-row .card img {
-    max-width: 100%;
-    width: 100%;
-  }
-}
-/* Storyboard panel styles */
-.storyboard-panel {
-  margin: 0;
-  border: 1px solid #e5e7eb;
-  border-radius: .75rem;
-  overflow: hidden;
-}
-
-.storyboard-img {
-  display: block;
-  width: 100%;
-  height: auto;
-  aspect-ratio: 16/9;
-  background: #f3f4f6;
-  object-fit: cover;
-}
-
-.storyboard-caption {
-  padding: .75rem;
-}
+/* Global styles */
 html, body {
       height: 100%;
       margin: 0;
@@ -88,6 +24,17 @@ html, body {
       font-weight: 500;
       color: #231942;
     }
+    h1.with-subtitle {
+      font-family: 'Open Sansw', Arial, sans-serif;
+      font-size: 2.5rem;
+      margin: 0;
+      line-height: 1.2;
+      font-weight: 500;
+      color: #231942;
+      margin-bottom: 0rem;
+      margin-top:0rem;
+    }
+
     h2{
       font-size: 2rem;
       margin-bottom: 1rem;
@@ -95,6 +42,36 @@ html, body {
     h3{
       font-size: 1.75rem;
       margin-bottom: 1rem;
+    }
+    h3.subtitle {
+      font-size: 1.75rem;
+      margin-top: 0;
+      margin-bottom: 0;
+      color: #555;
+    }
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 1.8rem;
+      }
+      h1.with-subtitle{
+        font-size: 1.7rem;
+      }
+      h2 {
+        font-size: 1.4rem;
+      }
+      h3 {
+        font-size: 1.2rem;
+      }
+      h4 {
+        font-size: 1rem;
+      }
+    }
+
+    .subtitle {
+      display: block;
+      margin-top: 0rem; /* or 0 for no gap */
+      font-size: 1.15rem;
+      color: #555;
     }
     .max-width {
       max-width: 1200px;
@@ -115,8 +92,7 @@ html, body {
       flex-direction: column;
       align-items: center;
       justify-content: top;
-      padding: 2rem 1rem;
-      text-align: center;
+      text-align: left;
     }
     .container {
       max-width: 100%;
@@ -240,6 +216,12 @@ html, body {
     }
 
     /* Calendly sizing */
+    #calendar {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      box-sizing: border-box;
+    }
     .calendly-inline-widget {
       min-width: 320px;
       height: 700px;
@@ -434,9 +416,6 @@ html, body {
     .error-text{ color:#B91C1C; font-size:.85rem; margin-top:6px; }
 
     @media (min-width: 600px) {
-      main {
-        padding: 4rem 2rem;
-      }
       .impact-btn {
         font-size: 1.5rem;
         padding: 1.25rem 3rem;
@@ -639,4 +618,89 @@ html, body {
       text-align: left;
     }
   }
+
+  /* Flex row for Why Stories Stick section */
+.why-stories-row {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+.why-stories-content {
+  flex: 1 1 320px;
+  min-width: 0;
+}
+/* Make the image card take up more space in the row */
+.why-stories-row .card {
+  flex: 1 1 400px;
+  max-width: 600px;
+  min-width: 240px;
+  align-self: flex-start;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.why-stories-row .card img {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  border-radius: 1rem;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+}
+@media (max-width: 800px) {
+  .why-stories-row {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  .why-stories-row .card {
+    max-width: 100%;
+    width: 100%;
+    align-self: center;
+  }
+  .why-stories-row .card img {
+    max-width: 100%;
+    width: 100%;
+  }
+}
+
+/* Video embed styles */
+
+ .responsive-video-container {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  height: 0;
+  overflow: hidden;
+  background: #000;
+  }
+  .responsive-video-container iframe {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    border: 0;
+  }
+
+
+/* Storyboard panel styles */
+.storyboard-panel {
+  margin: 0;
+  border: 1px solid #e5e7eb;
+  border-radius: .75rem;
+  overflow: hidden;
+}
+
+.storyboard-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16/9;
+  background: #f3f4f6;
+  object-fit: cover;
+}
+
+.storyboard-caption {
+  padding: .75rem;
+}
  
