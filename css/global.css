@@ -1,8 +1,18 @@
 /* Global styles */
 html, body {
-      height: 100%;
-      margin: 0;
-    }
+  height: 100%;
+  margin: 0;
+  background: #444444;
+}
+/* Email container styles */
+.email-container {
+  max-width: 600px;
+  margin: 0 auto;
+  background: #fafdf6;
+  padding: 2rem;
+  box-sizing: border-box;
+  border-radius: 8px;
+}
 
     body {
       margin: 0;
