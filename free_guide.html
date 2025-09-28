@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Get the Free Guide</title>
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <section class="max-width">
+    <!--#include virtual="header.html" -->
+    <header id="header"></header>
+    <main>
+        <div class="form-container">
+            <h1>Get the Free Guide</h1>
+            <p class="form-subhead">
+                Ads are just noise swirling in the void. Stories expand your brand into culture.
+                This guide is for the bold visionaries ready to be remembered.
+            </p>
+
+            <form class="pdf-download-form"
+                    action="https://docs.google.com/forms/d/e/YOUR_FORM_ID/formResponse"
+                    method="POST" target="_blank" autocomplete="on">
+                <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text"
+                        id="name"
+                        name="entry.YOUR_NAME_ENTRY_ID"
+                        required
+                        placeholder="Your Name"
+                        class="form-input">
+                </div>
+
+                <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email"
+                        id="email"
+                        name="entry.YOUR_EMAIL_ENTRY_ID"
+                        required
+                        placeholder="you@email.com"
+                        class="form-input">
+                </div>
+
+                <div class="form-group">
+                <label for="mobile">Mobile (optional)</label>
+                <input type="tel"
+                        id="mobile"
+                        name="entry.YOUR_MOBILE_ENTRY_ID"
+                        placeholder="(555) 555-5555"
+                        class="form-input">
+                <small class="form-help">Prefer to read it on your phone? We’ll text you the link too.</small>
+                </div>
+
+                <button type="submit" class="impact-btn">Get the PDF</button>
+            </form>
+
+            <div class="impact-note">
+                We’ll deliver your download instantly by email — and if you add your mobile, you’ll also get the link by text.
+            </div>
+
+            <div class="privacy-note">
+                No spam. No endless messages. Just your cosmic guide, delivered your way.
+            </div>
+        </div>
+
+
+    </main>
+  </section>
+  <!--#include virtual="footer.html" -->
+  <footer id="footer"></footer>
+  <script src="js/loader.js"></script>
+  <script>
+    // Optional: Auto-download PDF after form submit (replace 'yourfile.pdf' with your actual file)
+    document.querySelector('.pdf-download-form').addEventListener('submit', function(e) {
+      setTimeout(function() {
+        window.location.href = 'yourfile.pdf';
+      }, 1500);
+    });
+  </script>
+</body>
+</html>

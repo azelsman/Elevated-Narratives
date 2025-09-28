@@ -1,18 +1,8 @@
 /* Global styles */
 html, body {
-  height: 100%;
-  margin: 0;
-  background: #444444;
-}
-/* Email container styles */
-.email-container {
-  max-width: 600px;
-  margin: 0 auto;
-  background: #fafdf6;
-  padding: 2rem;
-  box-sizing: border-box;
-  border-radius: 8px;
-}
+      height: 100%;
+      margin: 0;
+    }
 
     body {
       margin: 0;
@@ -58,6 +48,13 @@ html, body {
       margin-top: 0;
       margin-bottom: 0;
       color: #555;
+    }
+    .micro-note {
+      font-size: 0.9rem;
+      color: #666;
+      font-style: italic;
+      margin-top: 0.5rem;
+      margin-bottom: 1rem;
     }
     @media (max-width: 600px) {
       h1 {
@@ -279,10 +276,12 @@ html, body {
       border: none;
       border-radius: 2rem;
       padding: 1rem 2.5rem;
-      font-size: 1.25rem;
+      font-size: 1.0rem;
       margin-top: 2rem;
       cursor: pointer;
       transition: transform 0.15s ease, background 0.2s ease;
+      text-decoration: none;
+      margin: 2rem auto 0 auto;
     }
     .secondary-btn:hover, .secondary-btn:focus-visible {
       transform: scale(1.03);
@@ -295,7 +294,7 @@ html, body {
       border: none;
       border-radius: 3rem;
       padding: 1rem 1rem;
-      font-size: 1rem;
+      font-size: 1.25rem;
       margin-top: 2rem;
       cursor: pointer;
       transition: transform 0.15s ease, background 0.2s ease;
@@ -427,7 +426,7 @@ html, body {
 
     @media (min-width: 600px) {
       .impact-btn {
-        font-size: 1.5rem;
+        font-size: 1.0rem;
         padding: 1.25rem 3rem;
       }
     }
@@ -713,4 +712,126 @@ html, body {
 .storyboard-caption {
   padding: .75rem;
 }
- 
+
+/* Responsive 2x2 grid for What You Get section */
+.benefits-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+@media (min-width: 700px) {
+  .benefits-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.benefit-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.benefit-item {
+  text-align: center;
+}
+
+/* Left-align text in Impact & AI section */
+#proof-process .container .subtitle,
+#proof-process .container span.subtitle,
+#proof-process .container p,
+#proof-process .container ul.benefits-list,
+#proof-process .container li.benefit-item {
+  text-align: left;
+}
+
+/* Responsive spacing for the secondary CTA container */
+.secondary-cta-container {
+  padding: 0rem 0 2.0rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+@media (max-width: 600px) {
+  .secondary-cta-container {
+    padding: 1.25rem 0 1.75rem 0;
+  }
+}
+
+/* Center the submit button in the PDF download form */
+.pdf-download-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.pdf-download-form .impact-btn {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom:2rem;
+  display: block;
+}
+  
+/* Centered, rounded, floating form container */
+.form-container {
+  max-width: 420px;
+  margin: 5vh auto;
+  background: #fff;
+  border-radius: 2rem;
+  box-shadow: 0 4px 32px 0 #23194222;
+  padding: 2.5rem 2rem 2rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pdf-download-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.pdf-download-form .impact-btn {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+.form-group {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-input {
+  font-size: 1.2rem;
+  padding: 1rem 1.25rem;
+  border-radius: 2rem;
+  border: 1px solid #e0e0e0;
+  background: #fafdf6;
+  color: #231942;
+  outline: none;
+  transition: border 0.2s, box-shadow 0.2s;
+  box-shadow: 0 1px 4px 0 #23194211;
+}
+.form-input:focus {
+  border: 1.5px solid #662566;
+  box-shadow: 0 2px 12px 0 #66256622;
+}
+
+@media (max-width: 600px) {
+  .form-container {
+    max-width: 98vw;
+    padding: 1.25rem 0.5rem 1.5rem 0.5rem;
+  }
+}
+
+
+
