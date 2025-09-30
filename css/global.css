@@ -694,23 +694,28 @@ html, body {
 
 /* Storyboard panel styles */
 .storyboard-panel {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
   margin: 0;
-  border: 1px solid #e5e7eb;
-  border-radius: .75rem;
+  background: #fff;
+  border-radius: 1.25rem;
   overflow: hidden;
+  box-shadow: 0 2px 16px 0 #23194211;
 }
 
-.storyboard-img {
-  display: block;
+.storyboard-img.fill-panel {
   width: 100%;
   height: auto;
-  aspect-ratio: 16/9;
-  background: #f3f4f6;
+  aspect-ratio: 16 / 9;
   object-fit: cover;
+  display: block;
+  margin: 0;
+  border-radius: 0;
 }
 
 .storyboard-caption {
-  padding: .75rem;
+  padding: 1rem 1.25rem 1.25rem 1.25rem;
 }
 
 /* Responsive 2x2 grid for What You Get section */
@@ -733,7 +738,7 @@ html, body {
 }
 
 .benefit-item {
-  text-align: center;
+  text-align: left;
 }
 
 /* Left-align text in Impact & AI section */
@@ -831,6 +836,66 @@ html, body {
     max-width: 98vw;
     padding: 1.25rem 0.5rem 1.5rem 0.5rem;
   }
+}
+
+/* Responsive card grid for benefits */
+.benefits-card-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin: 2.5rem 0;
+}
+@media (min-width: 600px) {
+  .benefits-card-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (min-width: 900px) {
+  .benefits-card-grid {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+.benefit-card {
+  background: #fafdf6;
+  border-radius: 1.5rem;
+  box-shadow: 0 2px 16px 0 #23194211;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  text-align: center;
+  transition: box-shadow 0.2s, transform 0.2s;
+  padding: 0;
+}
+.benefit-card-content {
+  padding: 2rem 1.5rem 1.5rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.benefit-card-icon {
+  width: 100%;
+  max-width: none;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  margin-bottom: 0;
+  border-radius: 1.5rem 1.5rem 0 0;
+  background: transparent;
+  box-shadow: none;
+  padding: 0;
+  display: block;
+}
+.benefit-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #231942;
+}
+.benefit-text {
+  font-size: 1rem;
+  color: #444;
 }
 
 
