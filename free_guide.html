@@ -17,49 +17,7 @@
     <!--#include virtual="header.html" -->
     <header id="header"></header>
     <main>
-        <!-- old form
-            <div class="form-container">
-                <h1>Get the Free Guide</h1>
-                <p class="form-subhead">
-                Ads are just noise swirling in the void. Stories expand your brand into culture.
-                This guide is for the bold visionaries ready to be remembered.
-                </p>
-
-                <form class="pdf-download-form"
-                    action="https://docs.google.com/forms/d/e/YOUR_FORM_ID/formResponse"
-                    method="POST" target="_blank" autocomplete="on">
-                <div class="form-group">
-                <label for="name">Name</label>
-                <input type="text"
-                    id="name"
-                    name="entry.YOUR_NAME_ENTRY_ID"
-                    required
-                    placeholder="Your Name"
-                    class="form-input">
-                </div>
-
-                <div class="form-group">
-                <label for="email">Email</label>
-                <input type="email"
-                    id="email"
-                    name="entry.YOUR_EMAIL_ENTRY_ID"
-                    required
-                    placeholder="you@email.com"
-                    class="form-input">
-                </div>
-
-                <button type="submit" class="impact-btn">Get the PDF</button>
-                </form>
-
-                <div class="impact-note">
-                We’ll deliver your download instantly by email — and if you add your mobile, you’ll also get the link by text.
-                </div>
-
-                <div class="privacy-note">
-                No spam. No endless messages. Just your cosmic guide, delivered your way.
-                </div>
-            </div>
-        -->
+        <!-- old form removed for clarity -->
             
         <section id="form">
             
@@ -72,14 +30,14 @@
 
                 <div class="ml-form-embedBody ml-form-embedBodyDefault row-form">
 
-                    <div class="ml-form-embedContent" style=" ">
+                    <div class="ml-form-embedContent">
                     
                         <h1>Get the free guide</h1>
                         <p>Ads are just noise swirling in the void. Stories expand your brand into culture. This guide is for the bold visionaries ready to be remembered.</p>
                     
                     </div>
 
-                    <form class="ml-block-form" action="https://assets.mailerlite.com/jsonp/1799035/forms/166946545609999700/subscribe" data-code="" method="post" target="_blank">
+                    <form class="ml-block-form" action="https://assets.mailerlite.com/jsonp/1799035/forms/166946545609999700/subscribe" method="post" target="_blank">
                     <div class="ml-form-formContent">
                         
 
@@ -91,7 +49,7 @@
 
 
                             <!-- input -->
-                            <input aria-label="email" aria-required="true" type="email" class="form-control" data-inputmask="" name="fields[email]" placeholder="" autocomplete="email">
+                            <input aria-label="email" aria-required="true" type="email" class="form-control" data-inputmask="" name="fields[email]" placeholder="you@email.com" autocomplete="email">
                             <!-- /input -->
 
                             <!-- textarea -->
@@ -126,7 +84,7 @@
 
 
                             <!-- input -->
-                            <input aria-label="name" type="text" class="form-control" data-inputmask="" name="fields[name]" placeholder="" autocomplete="given-name">
+                            <input aria-label="name" type="text" class="form-control" data-inputmask="" name="fields[name]" placeholder="Your Name" autocomplete="given-name">
                             <!-- /input -->
 
                             <!-- textarea -->
@@ -161,9 +119,9 @@
                     
 
                     <!-- Privacy policy -->
-                    <div class="ml-form-embedPermissions" style="">
+                    <div class="ml-form-embedPermissions">
                         <div class="ml-form-embedPermissionsContent">
-                                <p>You can unsubscribe anytime. For more details, review our Privacy Policy.</p>
+                                <p>You can unsubscribe anytime. For more details, review our <a href="/privacy.html" target="_blank" rel="noopener">Privacy Policy</a>.</p>
 
                         </div>
                     </div>
@@ -179,7 +137,7 @@
 
         <div class="ml-form-recaptcha ml-validate-required" style="float: left;">
 
-        <script src="https://www.google.com/recaptcha/api.js"></script>
+    <!-- reCAPTCHA script already included in <head> -->
         <div class="g-recaptcha" data-sitekey="6Lf1KHQUAAAAAFNKEX1hdSWCS3mRMv4FlFaNslaD"></div>
         </div>
 
