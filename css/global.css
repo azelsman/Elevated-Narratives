@@ -74,6 +74,12 @@ html, body {
       }
     }
 
+    h2.subtitle {
+      font-size: 2rem;
+      font-weight: 400;
+      color: #231942;
+    }
+
     .subtitle {
       display: block;
       margin-top: 0rem; /* or 0 for no gap */
