@@ -22,7 +22,7 @@ html, body {
       margin: 0;
       line-height: 1.2;
       font-weight: 500;
-      color: #231942;
+      color: #5D1E60;
     }
     h1.with-subtitle {
       font-family: 'Open Sansw', Arial, sans-serif;
@@ -30,7 +30,6 @@ html, body {
       margin: 0;
       line-height: 1.2;
       font-weight: 500;
-      color: #231942;
       margin-bottom: 0rem;
       margin-top:0rem;
     }
@@ -38,6 +37,12 @@ html, body {
     h2{
       font-size: 2rem;
       margin-bottom: 1rem;
+    }
+    h2.with-subtitle {
+      font-size: 1.75rem;
+      margin-top: 0;
+      margin-bottom: 0;
+      color: #5D1E60;
     }
     h3{
       font-size: 1.75rem;
@@ -75,17 +80,14 @@ html, body {
       }
     }
 
-    h2.subtitle {
-      font-size: 2rem;
-      font-weight: 400;
-      color: #231942;
-    }
 
     .subtitle {
       display: block;
       margin-top: 0rem; /* or 0 for no gap */
-      font-size: 1.15rem;
-      color: #555;
+      font-size: 1.25rem;
+      font-weight: 500;
+      color: #666666;
+      padding-bottom: 1.5rem
     }
     .max-width {
       max-width: 1200px;
@@ -124,23 +126,166 @@ html, body {
     .padding-2rem {
       padding: 2rem;
     }
+    header {
+      width: 100%;
+      background: #231942;
+      color: #fff;
+      padding: 0;
+      margin: 0;
+    }
+    .header-inner {
+      width: 100%;
+      height: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      padding: 0;
+      gap: 2rem;
+    }
     .en-header {
       background:#231942; 
       color:#fff; 
       padding:0;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      flex-direction: row;
     }
     .logo {
-      height: 100%;
+      height: 80px;
+      width: auto;
+      margin: 0;
+      padding: 0;
+      display: block;
+    }
+    
+    a.logo {
+      margin: 0;
+      padding: 0;
+      display: block;
+      line-height: 0;
     }
 
     /* button styles */
     .nav {
       display: flex;
-      justify-content: center;
-      margin-top: 2rem;
+      justify-content: flex-start;
+      flex-direction: row;
+      margin-top: 0;
       gap: 1rem;
 
     }
+    header .nav .nav-list {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+      padding: 0;
+      margin: 0;
+    }
+    
+    header .nav .nav-list li a {
+      color: #fff;
+      text-decoration: none;
+      font-family: 'Open Sans', Arial, sans-serif;
+      font-weight: 400;
+      font-size: 1.25rem;
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      transition: background-color 0.2s ease;
+    }
+    
+    header .nav .nav-list li a:hover,
+    header .nav .nav-list li a:focus {
+      background-color: rgba(255, 255, 255, 0.1);
+      text-decoration: none;
+    }
+    
+    /* Logo responsive display */
+    .logo-mobile {
+      display: none;
+    }
+    
+    .logo-desktop {
+      display: block;
+    }
+    
+    /* Mobile responsive styles */
+    @media (max-width: 768px) {
+      .header-inner {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+        padding: 0;
+        height: auto;
+      }
+      
+      .en-header {
+        height: auto;
+      }
+      
+      .logo-desktop {
+        display: none;
+      }
+      
+      .logo-mobile {
+        display: block;
+      }
+      
+      .logo {
+        height: 60px;
+      }
+      
+      a.logo {
+        padding: 0;
+        margin: 0;
+      }
+      
+      .nav {
+        width: 100%;
+        justify-content: flex-start;
+        padding-left: 20px;
+      }
+      
+      header .nav .nav-list {
+        gap: 1rem;
+        justify-content: flex-start;
+        width: 100%;
+      }
+      
+      header .nav .nav-list li a {
+        font-size: 1rem;
+        padding: 0.5rem 1rem;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .header-inner {
+        gap: 0.75rem;
+      }
+      
+      .logo {
+        height: 50px;
+      }
+      
+      header .nav .nav-list {
+        gap: 0.5rem;
+        flex-wrap: wrap;
+      }
+      
+      header .nav .nav-list li a {
+        font-size: 0.9rem;
+        padding: 0.4rem 0.8rem;
+      }
+    }
+    
+    .img-600px-max {
+      max-width: none;
+      width: 100%;
+      height: auto;
+      display: block;
+      margin: 0 0 1rem 0;
+    }
+    
     .cta-container {
       text-align: center;
     }
@@ -204,14 +349,14 @@ html, body {
         justify-content: center;
       }
       .card {
-        flex: 1 1 300px; /* grow, shrink, min width */
-        max-width: 600px; /* or your preferred max */
+        flex: 1 1 200px; /* grow, shrink, min width for 4 cards */
+        max-width: 300px; /* smaller max width for 4 cards */
       }
 
     .card {
       display: block;
       width: 100%;
-      max-width: 600px;
+      max-width: 300px;
       aspect-ratio: 16/9;
       background: #f3f4f6;
       object-fit: cover;
@@ -229,6 +374,41 @@ html, body {
       box-sizing: border-box;
     }
 
+    .card-with-full-image {
+      display: block;
+      width: 100%;
+      max-width: 600px;
+      background: #f3f4f6;
+      margin: 0 auto;
+      box-sizing: border-box;
+      border-radius: .75em;
+      overflow: hidden;
+      flex: 1 1 300px; /* grow, shrink, min width */
+    }
+    
+    .card-with-full-image img {
+      display: block;
+      width: 100%;
+      height: auto;
+      margin: 0;
+      border-radius: 0;
+      box-sizing: border-box;
+    }
+    
+    .card-with-full-image h3,
+    .card-with-full-image p {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+    
+    .card-with-full-image h3 {
+      padding-top: 1rem;
+    }
+    
+    .card-with-full-image p {
+      padding-bottom: 1rem;
+    }
+
     /* Calendly sizing */
     #calendar {
       width: 100%;
@@ -239,6 +419,7 @@ html, body {
     .calendly-inline-widget {
       min-width: 320px;
       height: 700px;
+      padding-bottom: 2rem;
     }
     @media (max-width: 600px) {
       .calendly-inline-widget {
@@ -259,7 +440,7 @@ html, body {
     }
 
     strong{
-      font-weight: 600;
+      font-weight: 500;
     }
 
     .primary-btn {
