@@ -349,14 +349,14 @@ html, body {
         justify-content: center;
       }
       .card {
-        flex: 1 1 200px; /* grow, shrink, min width for 4 cards */
-        max-width: 300px; /* smaller max width for 4 cards */
+        flex: 1 1 300px; /* grow, shrink, min width */
+        max-width: 600px; /* or your preferred max */
       }
 
     .card {
       display: block;
       width: 100%;
-      max-width: 300px;
+      max-width: 600px;
       aspect-ratio: 16/9;
       background: #f3f4f6;
       object-fit: cover;
