@@ -34,6 +34,7 @@ html, body {
       margin-top:0rem;
     }
 
+
     h2{
       font-size: 2rem;
       margin-bottom: 1rem;
@@ -54,6 +55,10 @@ html, body {
       
       margin-bottom: 0;
       color: #555;
+    }
+  h4{
+      font-size: 1.25rem;
+      margin-bottom: 1rem;
     }
     .micro-note {
       font-size: 0.9rem;
@@ -106,8 +111,8 @@ html, body {
       flex: 1;
       display: flex;
       flex-direction: column;
-      align-items: center;
-      justify-content: top;
+      align-items: flex-start;
+      justify-content: flex-start;
       text-align: left;
     }
     .container {
@@ -118,6 +123,17 @@ html, body {
       box-sizing: border-box;
       background: #f8faf5;
     }
+
+    .align-left {
+      display: flex;
+      text-align: left;
+      align-items: flex-start;
+      justify-content: flex-start;
+      flex-direction: row;
+    }   
+    .pad-15rem {
+      padding: 0 1.5rem;
+    } 
     @media (max-width: 700px) {
       .container {
         padding: 1rem 0.5rem;
@@ -277,6 +293,11 @@ html, body {
         padding: 0.4rem 0.8rem;
       }
     }
+
+    .note {
+      font-size: .875rem;
+      font-style: italic;
+    }
     
     .img-600px-max {
       max-width: none;
@@ -309,6 +330,17 @@ html, body {
       margin: 0;
       font-size: 1rem;
       color: #231942;
+    }
+    section.section {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      box-sizing: border-box;
+      padding: 1rem;
+    }
+    section.section img {
+      border-radius: .75rem;
+
     }
     .image {
       width: 100%;
@@ -375,7 +407,9 @@ html, body {
     }
 
     .card-with-full-image {
-      display: block;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
       width: 100%;
       max-width: 600px;
       background: #f3f4f6;
@@ -384,6 +418,21 @@ html, body {
       border-radius: .75em;
       overflow: hidden;
       flex: 1 1 300px; /* grow, shrink, min width */
+      padding: 0;
+    }
+    .card-with-image {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      width: 100%;
+      max-width: 600px;
+      background: #f3f4f6;
+      margin: 0 auto;
+      box-sizing: border-box;
+      border-radius: .75em;
+      overflow: hidden;
+      flex: 1 1 300px; /* grow, shrink, min width */
+      padding: 0;
     }
     
     .card-with-full-image img {
@@ -391,17 +440,23 @@ html, body {
       width: 100%;
       height: auto;
       margin: 0;
-      border-radius: 0;
+      border-radius: .75em .75em 0 0;
       box-sizing: border-box;
     }
     
+    .card-row .card-with-full-image img {
+      border-radius: .75em .75em 0 0;
+    }
+    
     .card-with-full-image h3,
+    .card-with-full-image h4,
     .card-with-full-image p {
       padding-left: 1rem;
       padding-right: 1rem;
     }
     
-    .card-with-full-image h3 {
+    .card-with-full-image h3,
+    .card-with-full-image h4 {
       padding-top: 1rem;
     }
     
