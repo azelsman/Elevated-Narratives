@@ -92,7 +92,16 @@ html, body {
       font-size: 1.25rem;
       font-weight: 500;
       color: #666666;
-      padding-bottom: 1.5rem
+      padding-bottom: 0.25rem;
+    }
+    
+    .no-padding {
+      padding-bottom: 0 !important;
+      margin-bottom: 0 !important;
+    }
+    
+    #content.container {
+      padding: 1.5rem 1.5rem 0.5rem 1.5rem;
     }
     .max-width {
       max-width: 1200px;
@@ -119,7 +128,7 @@ html, body {
       max-width: 100%;
       width: 100%;
       margin: 0;
-      padding: 1.5rem 1.5rem 0 1.5rem;
+      padding: 1rem;
       box-sizing: border-box;
       background: #f8faf5;
     }
@@ -130,10 +139,16 @@ html, body {
       align-items: flex-start;
       justify-content: flex-start;
       flex-direction: row;
-    }   
+    }  
+    
+    /* utilities */
+
     .pad-15rem {
       padding: 0 1.5rem;
     } 
+    .pad-bottom-1rem {
+      padding-bottom: 1rem;
+    }
     @media (max-width: 700px) {
       .container {
         padding: 1rem 0.5rem;
@@ -142,6 +157,9 @@ html, body {
     .padding-2rem {
       padding: 2rem;
     }
+    .no-padding {
+      padding: 0;
+    } 
     header {
       width: 100%;
       background: #231942;
